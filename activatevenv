@@ -1,0 +1,9 @@
+#!/bin/bash
+
+VENVPATH='/home/ec2-user/workspace/jibcon_django_venv'
+VENVFULLPATH=$VENVPATH'/bin/activate'
+
+echo $VENVFULLPATH
+source $VENVFULLPATH
+
+# todo reimplement

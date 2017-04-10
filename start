@@ -1,0 +1,11 @@
+#!/bin/bash
+DJANGOPATH='/home/ec2-user/workspace/jibcon_django_server'
+COMMAND='python3 manage.py runserver 0.0.0.0:8000'
+LOGDIRPATH='/home/ec2-user/workspace/logs'
+DATETIME=$(date '+%F_%H%M%S')
+FILEPATH=($LOGDIRPATH'/logs_'$DATETIME'.log')
+
+#touch $FILEPATH
+echo $FILEPATH
+cd $DJANGOPATH
+nohup $COMMAND &> $FILEPATH &
